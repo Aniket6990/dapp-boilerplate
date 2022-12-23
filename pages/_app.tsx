@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import "../styles/NavBar.css";
 import type { AppProps } from "next/app";
 import "@rainbow-me/rainbowkit/styles.css";
 import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
@@ -28,7 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <WagmiConfig client={wagmiClient}>
         <RainbowKitProvider chains={chains}>
-          <Component {...pageProps} />;
+          <Component {...pageProps} />
         </RainbowKitProvider>
       </WagmiConfig>
     </>
